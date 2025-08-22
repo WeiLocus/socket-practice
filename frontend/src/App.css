@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.status {
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+.connected {
+  color: #61dafb;
+}
+.disconnected {
+  color: #f87171;
+}
+.dashboard {
+  display: flex;
+  gap: 40px;
+}
+.metric {
+  border: 1px solid #61dafb;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 200px;
+}
+.data {
+  font-size: 2em;
+  font-weight: bold;
+  color: #61dafb;
+  margin: 0;
+}
