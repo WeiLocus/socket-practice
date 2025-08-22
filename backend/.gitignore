@@ -1,2 +1,4 @@
 # venv 相關
 venv/
+
+__pycache__/
