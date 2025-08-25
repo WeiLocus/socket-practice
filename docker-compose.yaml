@@ -4,11 +4,16 @@ services:
     build: ./backend
     ports:
       - "5001:5001"
+    volumes:
+      - ./backend:/app
 
   frontend:
     build: ./frontend
     ports:
       - "5173:5173"
+    volumes:
+      - ./frontend:/app    # 讓本機程式碼即時掛載進容器
+      - /app/node_modules
 
     environment:
       - CHOKIDAR_USEPOLLING=true
