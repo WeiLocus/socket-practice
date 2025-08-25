@@ -11,5 +11,10 @@ export default defineConfig({
         ws: true, // 開啟 WebSocket 支援
       }
     }
+  },
+  build: {
+    esbuild: {
+      drop: ['console.log']
+    }
   }
 })
