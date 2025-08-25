@@ -2,6 +2,8 @@
 This project provides a real-time CPU and memory monitoring system using Docker, Flask, SocketIO, and React.
 
 ## Overview
+![demo](./demo.gif)
+
 The project consists of two main components:
 
 Backend: A Flask-based server that provides real-time CPU and memory usage data using SocketIO.
