@@ -19,16 +19,16 @@ thread_lock = threading.Lock()
 
 def background_data_generator():
     print("開始傳送真實系統數據...")
+    # 初始化 CPU 基準
+    psutil.cpu_percent(interval=None)
     while True:
         # cpu使用率
-        cpu_usage = psutil.cpu_percent(interval=None)
+        cpu_usage = psutil.cpu_percent(interval=1)
         # 記憶體使用率
         memory_usage = psutil.virtual_memory().percent
-        # cpu_usage = round(random.uniform(10.0,80.0), 2)
-        # memory_usage = round(random.uniform(30.0,90.0), 2)
         
         # 準備要發送的數據
-        data = { 'cpu': cpu_usage, 'memory': memory_usage }
+        data = {'cpu': round(cpu_usage, 2), 'memory': round(memory_usage, 2)}
 
         # 使用 socketio.emit 來發送事件給所有客戶端
         # 'update_data' 是事件名稱，前端會監聽這個事件
