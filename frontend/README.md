@@ -1,12 +1,22 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CPU and Memory Monitoring Frontend
 
-Currently, two official plugins are available:
+This is the frontend client for the CPU and Memory Monitoring application. It uses React and SocketIO to display real-time data from the backend server.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+To install the dependencies, run:
 
-## Expanding the ESLint configuration
+```
+npm install
+```
+to start the application, run:
+```
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Configuration
+The frontend is configured to connect to the backend server at http://localhost:5001. You can change this by modifying the socket.io-client URL in App.jsx.
+
+### Features
+Use recharts to visualize real-time CPU and memory usage data from the backend server.
+Updates data every 5 seconds.
